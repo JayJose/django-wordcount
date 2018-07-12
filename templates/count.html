@@ -1,0 +1,26 @@
+<h1>Count</h1>
+
+<h2>Original submission:</h2>
+{{ fulltext }}
+
+<h3>There were {{word_len}} words</h3>
+<h3>There were {{word_len_uniq}} unique words</h3>
+
+<table style="width:10%" border="1px solid black">
+  <tr>
+    <th>Word</th>
+    <th>Count</th>
+  </tr>
+{% for k, v in word_dict.items %}
+  <tr>
+    <td>{{k}}</td>
+    <td>{{v}}</td>
+  </tr>
+{% endfor %}
+</table>
+
+<br/>
+
+<form action="{% url 'index' %}">
+  <input type="submit" value="Try another" />
+</form>
