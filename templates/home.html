@@ -2,10 +2,10 @@
 
 <form action="{% url 'count' %}">
   <textarea cols="40" rows="5" name="fulltext"></textarea>
-  <br />
+  <br/>
   <input type="submit" value="Count!" />
 </form>
 
-<form action="{% url 'about' %}">
-  <input type="submit" value="About" />
-</form>
+<a href="{% url 'about' %}">
+  Learn more about this project
+</a>
